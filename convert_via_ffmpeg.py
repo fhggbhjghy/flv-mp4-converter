@@ -6,7 +6,9 @@ from tkinter import filedialog
 def open_file_dialog():
     root = tk.Tk()
     root.withdraw()
-    file_paths = filedialog.askopenfilenames()
+    file_paths = filedialog.askopenfilenames(
+        filetypes=[('flv', '*.flv')]
+    )
     return file_paths
 
 def convert(input, output):
